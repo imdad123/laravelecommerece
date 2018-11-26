@@ -10,8 +10,7 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Scripts -->
-    <script src="{{ asset('public/js/app.js') }}" defer></script>
+   
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
@@ -19,6 +18,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('public/css/app.css') }}" rel="stylesheet">
+    @yield("admin_css")
 </head>
 <body>
     <div id="app">
@@ -75,5 +75,6 @@
             @yield('content')
         </main>
     </div>
+    <script src="{{ asset('public/js/app.js')}}"></script>
 </body>
 </html>
